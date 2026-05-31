@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #faf7f2;
+  --color-cream-2: #f3ede2;
+  --color-ink: #1a1612;
+  --color-muted: #6b5d4f;
+  --color-rust: #8b3a0f;
+  --color-rust-deep: #6b2c0a;
+  --color-line: #e8e1d4;
+
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-cream);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-rust);
+  color: var(--color-cream);
+}
+
+/* Display headings: Fraunces with tight letterspacing + slight optical-size tuning */
+.font-display {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144;
+  letter-spacing: -0.02em;
+}
+
+.font-display-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-variation-settings: "opsz" 144;
+}
+
+/* Subtle texture for hero — a barely-there warm gradient */
+.bg-hero {
+  background:
+    radial-gradient(circle at 20% 10%, rgba(139, 58, 15, 0.06), transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 58, 15, 0.04), transparent 50%),
+    var(--color-cream);
+}
