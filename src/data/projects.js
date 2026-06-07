@@ -24,7 +24,7 @@ export const projects = [
     location: 'West Chicago, IL',
     tagline: 'A 28-year-old roofing contractor moved off a buggy Yola site onto a fast, trust-first static build.',
     summary: '17 pages of pure HTML/CSS/JS — services hub, service detail pages, project gallery, service-area pages, about, contact. Brand palette pulled from the actual logo. Schema markup on every page. Fast loads, real code, $0 hosting forever.',
-    liveUrl: 'https://jade-elf-ce4dee.netlify.app',
+    liveUrl: 'https://rise-exteriors-preview.netlify.app',
     liveLabel: 'View live preview',
     year: '2026',
     accent: '#506080',
