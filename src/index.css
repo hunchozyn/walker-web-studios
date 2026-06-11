@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cream: #faf7f2;
-  --color-cream-2: #f3ede2;
-  --color-ink: #1a1612;
-  --color-muted: #6b5d4f;
-  --color-rust: #8b3a0f;
-  --color-rust-deep: #6b2c0a;
-  --color-line: #e8e1d4;
+  --color-cream: #ede9fe;
+  --color-cream-2: #ffffff;
+  --color-ink: #111111;
+  --color-muted: #44403c;
+  --color-rust: #5046e5;
+  --color-rust-deep: #3a32b5;
+  --color-line: #111111;
+  --color-highlight: #ffd43b;
 
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-sans: "Space Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 html {
@@ -29,27 +30,54 @@ body {
 }
 
 ::selection {
-  background: var(--color-rust);
-  color: var(--color-cream);
+  background: var(--color-highlight);
+  color: var(--color-ink);
 }
 
-/* Display headings: Fraunces with tight letterspacing + slight optical-size tuning */
+/* Display headings: Space Grotesk bold, tight */
 .font-display {
   font-family: var(--font-display);
-  font-variation-settings: "opsz" 144;
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 
+/* Legacy italic accent class — neobrutalist style drops the italic, keeps the weight */
 .font-display-italic {
   font-family: var(--font-display);
-  font-style: italic;
-  font-variation-settings: "opsz" 144;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.01em;
 }
 
-/* Subtle texture for hero — a barely-there warm gradient */
+/* Flat paper hero — no gradients in this house */
 .bg-hero {
-  background:
-    radial-gradient(circle at 20% 10%, rgba(139, 58, 15, 0.06), transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(139, 58, 15, 0.04), transparent 50%),
-    var(--color-cream);
+  background: var(--color-cream);
+}
+
+/* Neobrutalist primitives */
+.brutal {
+  border: 2px solid var(--color-ink);
+  box-shadow: 6px 6px 0 var(--color-ink);
+}
+
+.brutal-sm {
+  border: 2px solid var(--color-ink);
+  box-shadow: 4px 4px 0 var(--color-ink);
+}
+
+.brutal-btn {
+  border: 2px solid var(--color-ink);
+  box-shadow: 4px 4px 0 var(--color-ink);
+  font-weight: 700;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.brutal-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--color-ink);
+}
+
+.brutal-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--color-ink);
 }

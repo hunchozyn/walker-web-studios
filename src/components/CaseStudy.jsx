@@ -8,25 +8,23 @@ export default function CaseStudy({ project, problem, approach, outcome, callout
     <article>
       {/* HERO */}
       <section
-        className="border-b border-line"
-        style={{
-          background: `linear-gradient(180deg, ${project.palette[0]} 0%, ${project.palette[1]} 100%)`,
-        }}
+        className="border-b-2 border-ink"
+        style={{ background: project.palette[0] }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-32">
           <Link
             to="/#work"
-            className="inline-flex items-center gap-2 text-sm mb-12 transition-opacity hover:opacity-80"
+            className="inline-flex items-center gap-2 text-sm font-bold mb-12 transition-opacity hover:opacity-80"
             style={{ color: project.palette[3] }}
           >
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M13 8H3M7 4L3 8l4 4" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            Back to work
+            BACK TO WORK
           </Link>
 
           <p
-            className="font-sans text-sm uppercase tracking-[0.25em] mb-6 opacity-70"
+            className="font-sans text-sm font-bold uppercase tracking-[0.25em] mb-6 opacity-70"
             style={{ color: project.palette[3] }}
           >
             {project.category} · {project.location}
@@ -50,11 +48,10 @@ export default function CaseStudy({ project, problem, approach, outcome, callout
             {project.stack.map((s) => (
               <span
                 key={s}
-                className="text-xs px-3 py-1 rounded-full backdrop-blur-sm"
+                className="text-xs font-bold px-3 py-1 border-2"
                 style={{
-                  background: `${project.palette[3]}22`,
                   color: project.palette[3],
-                  border: `1px solid ${project.palette[3]}33`,
+                  borderColor: project.palette[3],
                 }}
               >
                 {s}
@@ -65,7 +62,7 @@ export default function CaseStudy({ project, problem, approach, outcome, callout
       </section>
 
       {/* QUICK FACTS */}
-      <section className="bg-cream-2 border-b border-line">
+      <section className="bg-cream-2 border-b-2 border-ink">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
           <Fact label="Client" value={project.name} />
           <Fact label="Year" value={project.year} />
@@ -83,27 +80,23 @@ export default function CaseStudy({ project, problem, approach, outcome, callout
 
           {callout && (
             <aside
-              className="rounded-2xl p-8 lg:p-10 border"
-              style={{
-                background: `${project.accent}10`,
-                borderColor: `${project.accent}33`,
-              }}
+              className="brutal bg-cream-2 p-8 lg:p-10"
             >
-              <p className="font-display-italic text-2xl leading-snug" style={{ color: project.accent }}>
+              <p className="font-display text-2xl leading-snug" style={{ color: project.accent }}>
                 "{callout}"
               </p>
             </aside>
           )}
 
-          <div className="pt-8 border-t border-line">
+          <div className="pt-8 border-t-2 border-ink">
             <a
               href={project.liveUrl}
               target={project.liveUrl.startsWith('http') ? '_blank' : undefined}
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-ink text-cream hover:bg-rust transition-colors font-medium"
+              className="brutal-btn inline-flex items-center gap-2 px-6 py-3 bg-rust text-white"
             >
               {project.liveLabel}
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M4 12L12 4M12 4H6M12 4v6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </a>
@@ -112,31 +105,29 @@ export default function CaseStudy({ project, problem, approach, outcome, callout
       </section>
 
       {/* OTHER WORK */}
-      <section className="border-t border-line bg-cream-2/60 py-20">
+      <section className="border-t-2 border-ink bg-cream py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <p className="font-sans text-sm uppercase tracking-[0.25em] text-muted mb-6">
+          <p className="font-sans text-sm font-bold uppercase tracking-[0.25em] text-rust mb-6">
             More work
           </p>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {others.map((p) => (
               <Link
                 key={p.slug}
                 to={`/work/${p.slug}`}
-                className="group rounded-2xl overflow-hidden border border-line hover:shadow-lg transition-shadow"
-                style={{
-                  background: `linear-gradient(135deg, ${p.palette[0]} 0%, ${p.palette[1]} 100%)`,
-                }}
+                className="group brutal overflow-hidden transition-transform hover:-translate-y-1"
+                style={{ background: p.palette[0] }}
               >
                 <div className="p-8 flex flex-col justify-between aspect-[2/1]">
                   <div className="flex items-start justify-between">
                     <span className="font-display text-3xl" style={{ color: p.palette[3] }}>
                       {p.name}
                     </span>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: p.palette[3] }} className="group-hover:translate-x-1 transition-transform">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: p.palette[3] }} className="group-hover:translate-x-1 transition-transform">
                       <path d="M5 10h10M11 5l5 5-5 5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
-                  <div className="text-sm opacity-70" style={{ color: p.palette[3] }}>
+                  <div className="text-sm font-medium opacity-70" style={{ color: p.palette[3] }}>
                     {p.category} · {p.location}
                   </div>
                 </div>
@@ -152,7 +143,7 @@ export default function CaseStudy({ project, problem, approach, outcome, callout
 function Fact({ label, value }) {
   return (
     <div>
-      <div className="text-xs uppercase tracking-widest text-muted mb-2">{label}</div>
+      <div className="text-xs font-bold uppercase tracking-widest text-rust mb-2">{label}</div>
       <div className="text-ink">{value}</div>
     </div>
   )
@@ -161,7 +152,7 @@ function Fact({ label, value }) {
 function Block({ label, body }) {
   return (
     <section>
-      <p className="font-sans text-sm uppercase tracking-[0.25em] text-muted mb-4">
+      <p className="font-sans text-sm font-bold uppercase tracking-[0.25em] text-rust mb-4">
         {label}
       </p>
       <div className="text-lg leading-relaxed text-ink/85 space-y-4">

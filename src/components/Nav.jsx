@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 export default function Nav() {
@@ -20,43 +20,32 @@ export default function Nav() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-cream/95 backdrop-blur-md border-b border-line'
-          : 'bg-transparent border-b border-transparent'
+      className={`sticky top-0 z-50 transition-colors duration-200 ${
+        scrolled ? 'bg-cream border-b-2 border-ink' : 'bg-transparent border-b-2 border-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <span className="font-display text-xl tracking-tight">
-            Walker Web Studios
+        <Link to="/" className="flex items-center gap-2">
+          <span className="font-display text-lg sm:text-xl tracking-tight uppercase">
+            Walker Web Studios™
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-10 text-sm">
-          <a
-            href="/#work"
-            className="text-ink hover:text-rust transition-colors"
-          >
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="/#work" className="text-ink hover:text-rust transition-colors">
             Work
           </a>
-          <a
-            href="/#services"
-            className="text-ink hover:text-rust transition-colors"
-          >
+          <a href="/#services" className="text-ink hover:text-rust transition-colors">
             Services
           </a>
-          <a
-            href="/#about"
-            className="text-ink hover:text-rust transition-colors"
-          >
+          <a href="/#about" className="text-ink hover:text-rust transition-colors">
             About
           </a>
           <a
             href="/#contact"
-            className="inline-flex items-center px-4 py-2 rounded-full bg-ink text-cream hover:bg-rust transition-colors"
+            className="brutal-btn inline-flex items-center px-4 py-2 bg-highlight text-ink"
           >
-            Get in touch
+            GET IN TOUCH
           </a>
         </nav>
 
@@ -65,7 +54,7 @@ export default function Nav() {
           className="md:hidden p-2 -mr-2"
           aria-label="Toggle menu"
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             {mobileOpen ? (
               <path d="M6 6l12 12M6 18L18 6" strokeLinecap="round" />
             ) : (
@@ -80,16 +69,16 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-cream border-t border-line">
-          <nav className="px-6 py-4 flex flex-col gap-4 text-base">
+        <div className="md:hidden bg-cream border-t-2 border-b-2 border-ink">
+          <nav className="px-6 py-4 flex flex-col gap-4 text-base font-medium">
             <a href="/#work" className="py-2">Work</a>
             <a href="/#services" className="py-2">Services</a>
             <a href="/#about" className="py-2">About</a>
             <a
               href="/#contact"
-              className="py-2 inline-flex items-center justify-center px-4 rounded-full bg-ink text-cream"
+              className="brutal-btn py-2 inline-flex items-center justify-center px-4 bg-highlight text-ink"
             >
-              Get in touch
+              GET IN TOUCH
             </a>
           </nav>
         </div>

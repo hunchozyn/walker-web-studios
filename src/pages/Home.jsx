@@ -6,15 +6,14 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="bg-hero">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-24 pb-32 lg:pt-32 lg:pb-40">
-          <p className="font-sans text-sm uppercase tracking-[0.25em] text-muted mb-8">
-            Walker Web Studios — Est. 2026
-          </p>
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-20 pb-24 lg:pt-28 lg:pb-32">
+          <div className="inline-block bg-highlight brutal-sm px-3 py-1 text-xs font-bold tracking-wide mb-8">
+            OPEN FOR WORK — EST. 2026
+          </div>
 
-          <h1 className="font-display text-5xl md:text-7xl lg:text-[8.5rem] leading-[0.95] tracking-tight max-w-5xl text-ink">
-            Websites for{' '}
-            <span className="font-display-italic text-rust">places</span>{' '}
-            people remember.
+          <h1 className="font-display text-5xl md:text-7xl lg:text-[7rem] leading-[0.98] tracking-tight max-w-5xl text-ink">
+            Your competitor's site is ugly.{' '}
+            <span className="bg-highlight px-3 inline-block">Yours doesn't have to be.</span>
           </h1>
 
           <div className="mt-12 max-w-2xl">
@@ -23,27 +22,27 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-12 flex flex-wrap gap-4">
+          <div className="mt-12 flex flex-wrap gap-5">
             <a
               href="#work"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-ink text-cream hover:bg-rust transition-colors font-medium"
+              className="brutal-btn inline-flex items-center gap-2 px-6 py-3 bg-rust text-white"
             >
-              See the work
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
+              SEE THE WORK
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center px-6 py-3 rounded-full border border-ink text-ink hover:bg-ink hover:text-cream transition-colors font-medium"
+              className="brutal-btn inline-flex items-center px-6 py-3 bg-cream-2 text-ink"
             >
-              Start a project
+              START A PROJECT
             </a>
           </div>
         </div>
 
         {/* Hero metrics strip */}
-        <div className="border-t border-line bg-cream-2/60">
+        <div className="border-t-2 border-b-2 border-ink bg-cream-2">
           <div className="max-w-7xl mx-auto px-6 lg:px-10 py-8 grid grid-cols-2 md:grid-cols-4 gap-8">
             <Metric value="3" label="Live projects" />
             <Metric value="$99" label="/ month, all-in" />
@@ -58,12 +57,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
             <div>
-              <p className="font-sans text-sm uppercase tracking-[0.25em] text-muted mb-4">
+              <p className="font-sans text-sm font-bold uppercase tracking-[0.25em] text-rust mb-4">
                 Selected work
               </p>
               <h2 className="font-display text-4xl md:text-6xl tracking-tight leading-[1.05] max-w-2xl">
                 Three projects.{' '}
-                <span className="font-display-italic text-rust">Three different worlds.</span>
+                <span className="bg-highlight px-2 inline-block">Three different worlds.</span>
               </h2>
             </div>
             <p className="text-muted max-w-md">
@@ -80,23 +79,23 @@ export default function Home() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="bg-ink text-cream py-24 lg:py-32">
+      <section id="services" className="bg-ink text-cream py-24 lg:py-32 border-t-2 border-b-2 border-ink">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
-              <p className="font-sans text-sm uppercase tracking-[0.25em] text-cream/60 mb-4">
+              <p className="font-sans text-sm font-bold uppercase tracking-[0.25em] text-highlight mb-4">
                 What we do
               </p>
               <h2 className="font-display text-4xl md:text-6xl tracking-tight leading-[1.05] mb-8">
                 Custom design, modern build,{' '}
-                <span className="font-display-italic text-cream-2">hosted forever.</span>
+                <span className="bg-highlight text-ink px-2 inline-block">hosted forever.</span>
               </h2>
               <p className="text-cream/70 text-lg leading-relaxed max-w-md">
                 One subscription. One studio. The website your business should have always had.
               </p>
             </div>
 
-            <div className="space-y-px bg-cream/10">
+            <div className="space-y-4">
               <Service
                 number="01"
                 title="Custom design"
@@ -130,15 +129,15 @@ export default function Home() {
       {/* ABOUT */}
       <section id="about" className="py-24 lg:py-32">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
-          <p className="font-sans text-sm uppercase tracking-[0.25em] text-muted mb-6">
+          <p className="font-sans text-sm font-bold uppercase tracking-[0.25em] text-rust mb-6">
             About the studio
           </p>
           <h2 className="font-display text-4xl md:text-6xl tracking-tight leading-[1.05] mb-12">
             One designer.{' '}
-            <span className="font-display-italic text-rust">A handful of clients at a time.</span>
+            <span className="bg-highlight px-2 inline-block">A handful of clients at a time.</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-12 text-lg leading-relaxed text-ink/80">
+          <div className="brutal bg-cream-2 p-8 md:p-12 grid md:grid-cols-2 gap-12 text-lg leading-relaxed text-ink/80">
             <div className="space-y-4">
               <p>
                 Walker Web Studios is a one-person studio I started in 2026. My name is Nate Walker. I build modern websites for small businesses across the country — restaurants, retail, family trades.
@@ -160,25 +159,25 @@ export default function Home() {
       </section>
 
       {/* PROCESS / PRICING */}
-      <section className="bg-cream-2 py-24 lg:py-32">
+      <section className="bg-cream py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="font-sans text-sm uppercase tracking-[0.25em] text-muted mb-4">
+              <p className="font-sans text-sm font-bold uppercase tracking-[0.25em] text-rust mb-4">
                 How it works
               </p>
               <h2 className="font-display text-4xl md:text-6xl tracking-tight leading-[1.05] mb-8">
                 $99 a month.{' '}
-                <span className="font-display-italic text-rust">No setup fees.</span>
+                <span className="bg-highlight px-2 inline-block">No setup fees.</span>
               </h2>
               <p className="text-muted text-lg leading-relaxed mb-8 max-w-md">
                 One simple subscription that covers design, build, hosting, and ongoing edits. 12-month minimum. Cancel after that anytime.
               </p>
 
-              <div className="bg-cream border border-line rounded-2xl p-8">
+              <div className="brutal bg-cream-2 p-8">
                 <div className="flex items-baseline gap-2 mb-4">
                   <span className="font-display text-5xl">$99</span>
-                  <span className="text-muted">/ month</span>
+                  <span className="text-muted font-medium">/ month</span>
                 </div>
                 <ul className="space-y-3 text-ink/80">
                   <Bullet>Fully custom design — no templates</Bullet>
@@ -194,7 +193,7 @@ export default function Home() {
               </div>
             </div>
 
-            <ol className="space-y-10">
+            <ol className="space-y-6">
               <Step
                 number="01"
                 title="Discovery"
@@ -228,12 +227,12 @@ export default function Home() {
       {/* CONTACT */}
       <section id="contact" className="py-24 lg:py-32">
         <div className="max-w-3xl mx-auto px-6 lg:px-10 text-center">
-          <p className="font-sans text-sm uppercase tracking-[0.25em] text-muted mb-6">
+          <p className="font-sans text-sm font-bold uppercase tracking-[0.25em] text-rust mb-6">
             Start a project
           </p>
           <h2 className="font-display text-4xl md:text-6xl tracking-tight leading-[1.05] mb-8">
             Want a website that looks like{' '}
-            <span className="font-display-italic text-rust">your business?</span>
+            <span className="bg-highlight px-2 inline-block">your business?</span>
           </h2>
           <p className="text-muted text-lg leading-relaxed mb-12 max-w-xl mx-auto">
             Tell me about your business and what you're trying to do. I read every message and respond in under 24 hours.
@@ -244,7 +243,7 @@ export default function Home() {
             method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"
-            className="text-left space-y-6 bg-cream-2/60 border border-line rounded-2xl p-8 md:p-10"
+            className="text-left space-y-6 brutal bg-cream-2 p-8 md:p-10"
           >
             <input type="hidden" name="form-name" value="contact" />
             <p className="hidden">
@@ -265,10 +264,10 @@ export default function Home() {
 
             <button
               type="submit"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-ink text-cream hover:bg-rust transition-colors font-medium"
+              className="brutal-btn inline-flex items-center gap-2 px-6 py-3 bg-rust text-white cursor-pointer"
             >
-              Send it
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
+              SEND IT
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
@@ -278,7 +277,7 @@ export default function Home() {
             Or email me directly:{' '}
             <a
               href="mailto:nate@walkerwebstudios.com"
-              className="text-ink underline underline-offset-4 hover:text-rust"
+              className="text-ink font-medium underline underline-offset-4 decoration-2 hover:text-rust"
             >
               nate@walkerwebstudios.com
             </a>
@@ -293,7 +292,7 @@ function Metric({ value, label }) {
   return (
     <div>
       <div className="font-display text-3xl md:text-4xl text-ink leading-none">{value}</div>
-      <div className="text-xs uppercase tracking-widest text-muted mt-2">{label}</div>
+      <div className="text-xs font-bold uppercase tracking-widest text-muted mt-2">{label}</div>
     </div>
   )
 }
@@ -305,15 +304,10 @@ function ProjectCard({ project, index }) {
       <div className={`lg:col-span-7 ${reverse ? 'lg:order-2' : ''}`}>
         <Link to={`/work/${project.slug}`} className="block">
           <div
-            className="aspect-[16/10] rounded-2xl overflow-hidden border border-line shadow-sm group-hover:shadow-xl transition-shadow"
+            className="aspect-[16/10] overflow-hidden brutal transition-transform group-hover:-translate-y-1"
             style={{ background: project.palette[0] }}
           >
-            <div
-              className="w-full h-full flex flex-col justify-between p-8 lg:p-12"
-              style={{
-                background: `linear-gradient(135deg, ${project.palette[0]} 0%, ${project.palette[1]} 100%)`,
-              }}
-            >
+            <div className="w-full h-full flex flex-col justify-between p-8 lg:p-12">
               <div className="flex items-start justify-between">
                 <span
                   className="font-display text-4xl md:text-5xl"
@@ -325,18 +319,18 @@ function ProjectCard({ project, index }) {
                   {project.palette.map((c, i) => (
                     <span
                       key={i}
-                      className="w-3 h-3 rounded-full border border-white/20"
+                      className="w-4 h-4 border-2 border-ink"
                       style={{ background: c }}
                     />
                   ))}
                 </div>
               </div>
               <div className="flex items-end justify-between">
-                <div style={{ color: project.palette[3] }} className="opacity-80 text-sm">
+                <div style={{ color: project.palette[3] }} className="opacity-80 text-sm font-medium">
                   {project.category} · {project.location}
                 </div>
                 <div
-                  className="font-display-italic text-lg"
+                  className="font-display text-lg"
                   style={{ color: project.palette[2] }}
                 >
                   {project.year}
@@ -348,7 +342,7 @@ function ProjectCard({ project, index }) {
       </div>
 
       <div className={`lg:col-span-5 ${reverse ? 'lg:order-1' : ''}`}>
-        <p className="text-xs uppercase tracking-widest text-muted mb-3">
+        <p className="text-xs font-bold uppercase tracking-widest text-rust mb-3">
           {project.status}
         </p>
         <h3 className="font-display text-3xl md:text-4xl tracking-tight leading-[1.1] mb-4">
@@ -359,7 +353,7 @@ function ProjectCard({ project, index }) {
           {project.stack.map((s) => (
             <span
               key={s}
-              className="text-xs px-3 py-1 rounded-full border border-line bg-cream-2/60 text-muted"
+              className="text-xs font-bold px-3 py-1 border-2 border-ink bg-cream-2 text-ink"
             >
               {s}
             </span>
@@ -368,10 +362,10 @@ function ProjectCard({ project, index }) {
         <div className="flex gap-3">
           <Link
             to={`/work/${project.slug}`}
-            className="inline-flex items-center gap-2 text-ink underline underline-offset-4 hover:text-rust transition-colors text-sm font-medium"
+            className="inline-flex items-center gap-2 text-ink font-bold underline underline-offset-4 decoration-2 hover:text-rust transition-colors text-sm"
           >
-            Read the case study
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
+            READ THE CASE STUDY
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </Link>
@@ -383,11 +377,11 @@ function ProjectCard({ project, index }) {
 
 function Service({ number, title, description }) {
   return (
-    <div className="bg-ink p-8 lg:p-10 group">
+    <div className="border-2 border-cream/30 p-6 lg:p-8 hover:border-highlight transition-colors">
       <div className="flex items-baseline gap-6">
-        <span className="font-display text-cream/40 text-xl">{number}</span>
+        <span className="font-display text-highlight text-xl">{number}</span>
         <div className="flex-1">
-          <h3 className="font-display text-2xl mb-3">{title}</h3>
+          <h3 className="font-display text-2xl mb-3 uppercase">{title}</h3>
           <p className="text-cream/70 leading-relaxed">{description}</p>
         </div>
       </div>
@@ -397,10 +391,10 @@ function Service({ number, title, description }) {
 
 function Step({ number, title, description }) {
   return (
-    <li className="flex gap-6">
-      <span className="font-display-italic text-3xl text-rust shrink-0">{number}</span>
+    <li className="brutal-sm bg-cream-2 p-6 flex gap-6">
+      <span className="font-display text-3xl text-rust shrink-0">{number}</span>
       <div>
-        <h3 className="font-display text-xl mb-2">{title}</h3>
+        <h3 className="font-display text-xl mb-2 uppercase">{title}</h3>
         <p className="text-ink/70 leading-relaxed">{description}</p>
       </div>
     </li>
@@ -410,9 +404,8 @@ function Step({ number, title, description }) {
 function Bullet({ children }) {
   return (
     <li className="flex gap-3">
-      <svg width="20" height="20" viewBox="0 0 20 20" className="text-rust shrink-0 mt-1" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="10" cy="10" r="8" />
-        <path d="M6.5 10l2.5 2.5L13.5 8" strokeLinecap="round" strokeLinejoin="round" />
+      <svg width="20" height="20" viewBox="0 0 20 20" className="text-rust shrink-0 mt-1" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M4 10l4 4L16 6" strokeLinecap="square" />
       </svg>
       <span>{children}</span>
     </li>
@@ -421,10 +414,10 @@ function Bullet({ children }) {
 
 function Field({ label, name, type = 'text', required, as }) {
   const baseInput =
-    'w-full px-4 py-3 rounded-lg border border-line bg-cream text-ink placeholder-muted/50 focus:border-rust focus:outline-none transition-colors'
+    'w-full px-4 py-3 border-2 border-ink bg-cream-2 text-ink placeholder-muted/50 focus:border-rust focus:outline-none transition-colors'
   return (
     <label className="block">
-      <span className="block text-sm font-medium text-ink mb-2">
+      <span className="block text-sm font-bold text-ink mb-2 uppercase tracking-wide">
         {label} {required && <span className="text-rust">*</span>}
       </span>
       {as === 'textarea' ? (
